@@ -66,7 +66,10 @@ const deleteMovie = async (request, response) => {
 const updateMovie = async (request, response) => {
     try {
         const updMovie = await Movie.updateOne({ 
-            title: request.body.title});
+            title: request.body.title,
+            updTitle: request.body.title,
+        
+        });
 
             const successResponse = {
                 message: "Movie successfully updated.",
